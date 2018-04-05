@@ -1,0 +1,14 @@
+﻿<div class="navbar bg-info mb-1">
+	<a class="navbar-brand text-white">SPORTS STORE Admin</a>
+</div>
+<div class="row no-gutters">
+	<div class="col-3">
+		<button class="btn btn-block btn-outline-info" routerLink="/admin/students"
+				routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+			Overview
+		</button>
+	</div>
+	<div class="col p-2">
+		<router-outlet></router-outlet>
+	</div>
+</div>

@@ -10,11 +10,9 @@ import { Student } from './models/Student';
 
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, FormsModule, HttpClientModule, ModelModule],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent],
+	imports: [BrowserModule, FormsModule, HttpClientModule, ModelModule],
+	providers: [],
+	bootstrap: [AppComponent]
 })
-
-export class AppModule {
-}
+export class AppModule { }

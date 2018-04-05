@@ -7,7 +7,6 @@ import { Student } from "./models/Student";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
 	constructor(private repo: Repository) { }
 
