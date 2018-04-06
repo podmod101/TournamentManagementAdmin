@@ -1,6 +1,37 @@
-<table class="table table-sm table-striped">
-	<tr><th>Name</th><td>{{student?.firstName}}</td></tr>
-	<tr><th>Last Name</th><td>{{student?.lastName}}</td></tr>
-	<tr><th>Middle Initial</th><td>{{student?.middleInitial}}</td></tr>
-	<tr><th>Date of Birth</th><td>{{student?.dateOfBirth}}</td></tr>
-</table>
+
+
+
+<div class="container-fluid text-center">
+	<div class="row content">
+		<div id="bodySection" class="col-md-8 text-left">
+			<!--<student-table></student-table>-->
+			<!--TRY TO GET ROUTING WORKING FOR THE TABLE COMPONENT/MODULE/HTML-->
+			<table class="table table-md table-striped table-hover">
+				<tr>
+					<th>Hunting License #</th>
+					<th>First</th>
+					<th>Last</th>
+					<th>DOB</th>
+				</tr>
+				<tr *ngFor="let student of students">
+					<td>{{student?.huntingLicenseNumber}}</td>
+					<td>{{student?.firstName}}</td>
+					<td>{{student?.lastName}}</td>
+					<td>{{student?.dateOfBirth | date:'MM/dd/yyyy' }}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="actionPane" class="panel panel-default col-md-4 rounded">
+			<div class="panel-heading bg-info text-white" style="padding: 10px;">
+				<h3 class="panel-title">Record Management</h3>
+			</div>
+			<div class="panel-body bg-light" style="height:100%; padding: 20px;">
+				<button class="btn btn-primary">Record Details</button>
+				<button class="btn btn-primary">Edit Record</button>
+				<button class="btn btn-primary">New Record</button>
+			</div>
+		</div>
+
+	</div>
+</div>

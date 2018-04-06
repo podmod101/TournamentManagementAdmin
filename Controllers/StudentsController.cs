@@ -24,7 +24,7 @@ namespace TournamentManagementAdmin.Controllers
         [HttpGet]
         public IEnumerable<Student> GetStudent()
         {
-            return _context.Student;
+            return _context.Student.OrderBy(m => m.FirstName);
         }
 
         // GET: api/Students/5

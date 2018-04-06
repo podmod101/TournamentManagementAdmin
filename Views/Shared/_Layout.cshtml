@@ -1,13 +1,48 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Administration Dashboard</title>
-  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Administration Dashboard</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+	@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
+	<style>
+		#bodySection {
+			padding-left: 0px;
+			margin-left: 0px;
+		}
+		#mainSection {
+			padding: 0px;
+			margin: 0px;
+			border: none;
+			height: 100%;
+		}
+		#topNav {
+			margin: 0px;
+		}
+		#actionPane {
+			padding: 5px;
+		}
+	</style>
 </head>
 <body>
-  @RenderBody()
-  @RenderSection("Scripts", required: false)
+	<div id="mainSection" class="container-fluid">
+		<div id="topNav" class="navbar navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">@(ViewBag.Message ?? "AIMS Administration")</a>
+		</div>
+
+		@RenderBody()
+	</div>
+
+		@*<div class="container">
+			<div class="navbar navbar-dark bg-dark">
+				<a class="navbar-brand" href="#">@(ViewBag.Message ?? "AIMS Administration")</a>
+			</div>
+			<div>
+				@RenderBody()
+			</div>
+		</div>*@
+		@RenderSection("Scripts", required: false)
 </body>
 </html>

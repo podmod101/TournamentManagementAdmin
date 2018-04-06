@@ -1,7 +1,7 @@
 ﻿import { Student } from "./Student";
 import { Injectable } from "@angular/core";
-import { HttpBackend } from "@angular/common/http/src/backend";
 import { HttpClient } from "@angular/common/http";
+import { StudentDetail } from "./StudentDetail";
 
 const studentsUrl = "/api/students";
 //searchHeroes(term: string): Observable < Hero[] > { term = term.trim();
@@ -13,18 +13,21 @@ const studentsUrl = "/api/students";
 @Injectable()
 export class Repository {
 	constructor(private http: HttpClient) {
-		//this.student = JSON.parse(document.getElementById("data").textContent);
-
+		this.getStudent(53);
 		this.getStudents();
 	}
 
-	getStudents() {
-		return this.http.get<Student[]>("/api/students").subscribe(response => this.student = response);
-	}
-
 	getStudent(id: number) {
-		this.http.get("");
+		this.http.get<Student>(studentsUrl + "/" + id).subscribe(response => this.student = response);
 	}
 
-	student: Student[];
+	getStudents() {
+		this.http.get<Student[]>(studentsUrl).subscribe(response => this.students = response);
+	}
+	
+	student: Student;
+	students: Student[];
+
+	studentDetail: StudentDetail;
+	studentDetails: StudentDetail[];
 }

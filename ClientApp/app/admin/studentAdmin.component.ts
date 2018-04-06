@@ -2,10 +2,13 @@
 import { Repository } from "../models/repository";
 import { Student } from "../models/Student";
 
+@Component({
+	templateUrl: "studentAdmin.component.html"
+})
 export class StudentAdminComponent {
-	constructor(private repo: Repository) {
-		this.repo.student = this.repo.getStudents();
+	constructor(private repo: Repository) { }
+
+	get student(): Student {
+		return this.repo.student;
 	}
-
-
 }

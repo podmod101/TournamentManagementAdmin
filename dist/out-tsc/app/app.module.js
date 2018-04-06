@@ -6,19 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
-var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
+var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/common/http");
 var model_module_1 = require("./models/model.module");
+var admin_module_1 = require("./admin/admin.module");
+//import { RoutingConfig } from './app.routing';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             declarations: [app_component_1.AppComponent],
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, model_module_1.ModelModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpClientModule, model_module_1.ModelModule, admin_module_1.AdminModule],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
         })

@@ -10,34 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var repository_1 = require("./models/repository");
-var AppComponent = /** @class */ (function () {
-    function AppComponent(repo) {
+var repository_1 = require("../models/repository");
+var AdminComponent = /** @class */ (function () {
+    function AdminComponent(repo) {
         this.repo = repo;
     }
-    Object.defineProperty(AppComponent.prototype, "student", {
-        get: function () {
-            return this.repo.student;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AppComponent.prototype, "students", {
-        get: function () {
-            return this.repo.students;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    AppComponent = __decorate([
+    AdminComponent = __decorate([
         core_1.Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+            templateUrl: "admin.component.html"
         }),
         __metadata("design:paramtypes", [repository_1.Repository])
-    ], AppComponent);
-    return AppComponent;
+    ], AdminComponent);
+    return AdminComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AdminComponent = AdminComponent;
+//# sourceMappingURL=admin.component.js.map
