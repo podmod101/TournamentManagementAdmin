@@ -1,0 +1,22 @@
+﻿<table class="table table-md table-striped table-hover">
+	<tr>
+		<th>Name</th>
+		<th>Location</th>
+		<th>Address</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip</th>
+		<th>Start</th>
+		<th>End</th>
+	</tr>
+	<tr *ngFor="let tournament of tournaments"> <!--this is where the click events will be placed to control action pane (needs to be cursor only, not carot)-->
+		<td>{{tournament?.name}}</td>
+		<td>{{tournament?.location}}</td>
+		<td>{{tournament?.address}}</td>
+		<td>{{tournament?.city}}</td>
+		<td>{{tournament?.state}}</td>
+		<td>{{tournament?.zip}}</td>
+		<td>{{tournament?.startDate | date:'MM/dd/yyyy'}}</td>
+		<td>{{tournament?.endDate | date:'MM/dd/yyyy'}}</td>
+	</tr>
+</table>

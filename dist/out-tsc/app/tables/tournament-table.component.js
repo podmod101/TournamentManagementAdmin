@@ -9,41 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var repository_1 = require("../models/repository");
 var core_1 = require("@angular/core");
-var repository_1 = require("./models/repository");
-var AppComponent = /** @class */ (function () {
-    function AppComponent(repo) {
+var TournamentTableComponent = /** @class */ (function () {
+    function TournamentTableComponent(repo) {
         this.repo = repo;
     }
-    Object.defineProperty(AppComponent.prototype, "student", {
-        get: function () { return this.repo.student; },
+    Object.defineProperty(TournamentTableComponent.prototype, "tournament", {
+        get: function () { return this.repo.tournament; },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppComponent.prototype, "students", {
-        get: function () { return this.repo.students; },
+    Object.defineProperty(TournamentTableComponent.prototype, "tournaments", {
+        get: function () { return this.repo.tournaments; },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppComponent.prototype, "studentDetail", {
-        get: function () { return this.repo.studentDetail; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AppComponent.prototype, "studentDetails", {
-        get: function () { return this.repo.studentDetails; },
-        enumerable: true,
-        configurable: true
-    });
-    AppComponent = __decorate([
+    TournamentTableComponent = __decorate([
         core_1.Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+            selector: "tournament-table",
+            templateUrl: "./tournament-table.component.html"
         }),
         __metadata("design:paramtypes", [repository_1.Repository])
-    ], AppComponent);
-    return AppComponent;
+    ], TournamentTableComponent);
+    return TournamentTableComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TournamentTableComponent = TournamentTableComponent;
+//# sourceMappingURL=tournament-table.component.js.map

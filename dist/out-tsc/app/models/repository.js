@@ -12,15 +12,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 var studentsUrl = "/api/students";
+var tournamentsUrl = "/api/tournaments";
 //searchHeroes(term: string): Observable < Hero[] > { term = term.trim();
 // Add safe, URL encoded search parameter if there is a search term
 //const options = term ? { params: new HttpParams().set('name', term) } : {};
 var Repository = /** @class */ (function () {
     function Repository(http) {
         this.http = http;
-        //this.student = JSON.parse(document.getElementById("data").textContent);
         this.getStudent(53);
         this.getStudents();
+        this.getTournament(8);
+        this.getTournaments();
     }
     Repository.prototype.getStudent = function (id) {
         var _this = this;
@@ -29,6 +31,14 @@ var Repository = /** @class */ (function () {
     Repository.prototype.getStudents = function () {
         var _this = this;
         this.http.get(studentsUrl).subscribe(function (response) { return _this.students = response; });
+    };
+    Repository.prototype.getTournament = function (id) {
+        var _this = this;
+        this.http.get(tournamentsUrl + "/" + id).subscribe(function (response) { return _this.tournament = response; });
+    };
+    Repository.prototype.getTournaments = function () {
+        var _this = this;
+        this.http.get(tournamentsUrl).subscribe(function (response) { return _this.tournaments = response; });
     };
     Repository = __decorate([
         core_1.Injectable(),

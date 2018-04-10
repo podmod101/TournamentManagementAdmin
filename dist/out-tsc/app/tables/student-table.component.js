@@ -9,41 +9,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var repository_1 = require("../models/repository");
 var core_1 = require("@angular/core");
-var repository_1 = require("./models/repository");
-var AppComponent = /** @class */ (function () {
-    function AppComponent(repo) {
+var StudentTableComponent = /** @class */ (function () {
+    function StudentTableComponent(repo) {
         this.repo = repo;
     }
-    Object.defineProperty(AppComponent.prototype, "student", {
+    Object.defineProperty(StudentTableComponent.prototype, "student", {
         get: function () { return this.repo.student; },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppComponent.prototype, "students", {
+    Object.defineProperty(StudentTableComponent.prototype, "students", {
         get: function () { return this.repo.students; },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppComponent.prototype, "studentDetail", {
+    Object.defineProperty(StudentTableComponent.prototype, "studentDetail", {
         get: function () { return this.repo.studentDetail; },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppComponent.prototype, "studentDetails", {
+    Object.defineProperty(StudentTableComponent.prototype, "studentDetails", {
         get: function () { return this.repo.studentDetails; },
         enumerable: true,
         configurable: true
     });
-    AppComponent = __decorate([
+    StudentTableComponent = __decorate([
         core_1.Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+            selector: "student-table",
+            templateUrl: "./student-table.component.html"
         }),
         __metadata("design:paramtypes", [repository_1.Repository])
-    ], AppComponent);
-    return AppComponent;
+    ], StudentTableComponent);
+    return StudentTableComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.StudentTableComponent = StudentTableComponent;
+//# sourceMappingURL=student-table.component.js.map

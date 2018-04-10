@@ -6,9 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\app\tables\studentTable.component.ts" />
-    <None Remove="ClientApp\app\tables\tables.component.ts" />
-    <None Remove="ClientApp\app\tables\tables.module.ts" />
+    <None Remove="ClientApp\app\tables\tournament-table.component.ts" />
     <None Remove="ClientApp\boot.ts" />
   </ItemGroup>
 
@@ -26,9 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\app\tables\studentTable.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\tables\tables.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\tables\tables.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\tables\tournament-table.component.ts" />
     <TypeScriptCompile Include="ClientApp\boot.ts" />
   </ItemGroup>
 

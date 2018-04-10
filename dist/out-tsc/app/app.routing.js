@@ -1,4 +1,5 @@
 //import { Routes, RouterModule } from "@angular/router";
+//import { StudentTableComponent } from "./tables/studentTable.component";
 //import { AdminComponent } from "./admin/admin.component";
 //import { StudentAdminComponent } from "./admin/studentAdmin.component";
 //import { ProductSelectionComponent } from "./store/productSelection.component";
@@ -12,16 +13,7 @@
 //import { ProductAdminComponent } from "./admin/productAdmin.component";
 //import { OrderAdminComponent } from "./admin/orderAdmin.component";
 //const routes: Routes = [
-//    {
-//        path: "admin", component: AdminComponent,
-//		children: [
-//			{ path: "students", component: StudentAdminComponent }
-//,
-//{ path: "orders", component: OrderAdminComponent },
-//{ path: "overview", component: OverviewComponent },
-//{ path: "", component: OverviewComponent }
-//       ]
-//}
+//    { path: "tables", component: StudentTableComponent }
 //,
 //   { path: "checkout/step1", component: CheckoutDetailsComponent },
 //   { path: "checkout/step2", component: CheckoutPaymentComponent },
