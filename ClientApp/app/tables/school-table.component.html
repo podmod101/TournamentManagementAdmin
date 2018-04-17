@@ -1,0 +1,20 @@
+﻿<table class="table table-md table-hover table-bordered">
+	<tr style="cursor: default; background-color: lightgray;">
+		<th>School</th>
+		<!--<th>County</th>-->
+		<th>Address</th>
+		<th>Address 2</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip</th>
+	</tr>
+	<tr *ngFor="let school of schools" style="cursor: pointer"> <!-- (click)="rowClick({{school?.schoolId}})"-->
+		<td>{{school?.name}}</td>
+		<!--<td>{{school?.county?.name}}</td>-->
+		<td>{{school?.address}}</td>
+		<td>{{school?.address2 || 'N/A'}}</td>
+		<td>{{school?.city}}</td>
+		<td>{{school?.state}}</td>
+		<td>{{school?.zip}}</td>
+	</tr>
+</table>

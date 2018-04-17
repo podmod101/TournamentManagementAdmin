@@ -9,52 +9,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var repository_1 = require("../models/repository");
 var core_1 = require("@angular/core");
-var repository_1 = require("./models/repository");
-//import { TableSwitch } from './tables/table-switch';
-var AppComponent = /** @class */ (function () {
-    function AppComponent(repo) {
+var SchoolTableComponent = /** @class */ (function () {
+    function SchoolTableComponent(repo) {
         this.repo = repo;
     }
-    Object.defineProperty(AppComponent.prototype, "student", {
-        get: function () { return this.repo.student; },
+    Object.defineProperty(SchoolTableComponent.prototype, "school", {
+        get: function () { return this.repo.school; },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppComponent.prototype, "students", {
-        get: function () { return this.repo.students; },
+    Object.defineProperty(SchoolTableComponent.prototype, "schools", {
+        get: function () { return this.repo.schools; },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppComponent.prototype, "studentDetail", {
-        get: function () { return this.repo.studentDetail; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AppComponent.prototype, "studentDetails", {
-        get: function () { return this.repo.studentDetails; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AppComponent.prototype, "schoolDetail", {
+    Object.defineProperty(SchoolTableComponent.prototype, "schoolDetail", {
         get: function () { return this.repo.schoolDetail; },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppComponent.prototype, "schoolDetails", {
+    Object.defineProperty(SchoolTableComponent.prototype, "schoolDetails", {
         get: function () { return this.repo.schoolDetails; },
         enumerable: true,
         configurable: true
     });
-    AppComponent = __decorate([
+    SchoolTableComponent = __decorate([
         core_1.Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+            selector: "school-table",
+            templateUrl: "./school-table.component.html"
         }),
         __metadata("design:paramtypes", [repository_1.Repository])
-    ], AppComponent);
-    return AppComponent;
+    ], SchoolTableComponent);
+    return SchoolTableComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.SchoolTableComponent = SchoolTableComponent;
+//# sourceMappingURL=school-table.component.js.map

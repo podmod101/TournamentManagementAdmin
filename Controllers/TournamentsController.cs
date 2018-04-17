@@ -24,7 +24,7 @@ namespace TournamentManagementAdmin.Controllers
         [HttpGet]
         public IEnumerable<Tournament> GetTournament()
         {
-            return _context.Tournament;
+            return _context.Tournament.ToList();
         }
 
         // GET: api/Tournaments/5

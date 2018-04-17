@@ -1,5 +1,5 @@
-﻿<table class="table table-md table-striped table-hover">
-	<tr>
+﻿<table class="table table-md table-hover table-bordered">
+	<tr style="cursor: default; background-color: lightgray;">
 		<th>Name</th>
 		<th>Location</th>
 		<th>Address</th>
@@ -9,7 +9,7 @@
 		<th>Start</th>
 		<th>End</th>
 	</tr>
-	<tr *ngFor="let tournament of tournaments"> <!--this is where the click events will be placed to control action pane (needs to be cursor only, not carot)-->
+	<tr *ngFor="let tournament of tournaments" style="cursor: pointer">
 		<td>{{tournament?.name}}</td>
 		<td>{{tournament?.location}}</td>
 		<td>{{tournament?.address}}</td>

@@ -20,8 +20,7 @@ namespace TournamentManagementAdmin.Controllers
 
         public IActionResult Index()
         {
-			var student = _context.Student.Where(m => m.FirstName.Contains("lana")).FirstOrDefault();
-            return View(student);
+            return View();
         }
 
         public IActionResult Error()

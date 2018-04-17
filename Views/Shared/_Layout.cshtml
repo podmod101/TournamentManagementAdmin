@@ -4,14 +4,14 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Administration Dashboard</title>
-	@*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+	<base href="/"/>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
 		#bodySection {
-			padding-left: 0px;
-			margin-left: 0px;
+			margin-top: 20px;
 		}
 
 		#mainSection {
@@ -21,18 +21,22 @@
 			height: 100%;
 		}
 
+		.navbar {
+			margin-bottom: 0px;
+		}
+
 		#topNav {
 			margin: 0px;
 		}
 
 		#actionPane {
-			padding: 5px;
+			padding: 0px;
 		}
 	</style>
 </head>
 <body>
 	<div id="mainSection" class="container-fluid">
-		<nav class="navbar navbar-inverse">
+		<!--<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -45,26 +49,29 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#">Home</a></li>
-						@*<li class="dropdown">
+						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Students <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="#">sub1</a></li>
 								<li><a href="#">sub2</a></li>
 							</ul>
-						</li>*@
+						</li>
 						<li><a href="#">Students</a></li>
 						<li><a href="#">Schools</a></li>
 						<li><a href="#">Tournaments</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 					</ul>
 				</div>
 			</div>
-		</nav>
+		</nav>-->
+
+		<!------------------------------------>
+
 
 		@RenderBody()
+
 	</div>
 
 		@*<div class="container">

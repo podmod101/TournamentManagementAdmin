@@ -1,7 +1,16 @@
 ﻿import { Repository } from "../models/repository";
+
 import { Student } from "../models/Student";
 import { StudentDetail } from "../models/StudentDetail";
-import { Component } from "@angular/core";
+import { School } from "../models/School";
+import { SchoolDetail } from "../models/SchoolDetail";
+
+import { TableSwitch } from "./table-switch";
+import { Component, Input } from "@angular/core";
+
+import { StudentTableComponent } from "./student-table.component";
+import { SchoolTableComponent } from "./school-table.component";
+import { TournamentTableComponent } from "./tournament-table.component";
 
 @Component({
 	selector: "table-root",
@@ -9,10 +18,30 @@ import { Component } from "@angular/core";
 })
 export class TableComponent {
 	constructor(private repo: Repository) { }
-	
-	//get student(): Student { return this.repo.student; }
-	//get students(): Student[] { return this.repo.students; }
-
-	//get studentDetail(): StudentDetail { return this.repo.studentDetail; }
-	//get studentDetails(): StudentDetail[] { return this.repo.studentDetails; }
 }
+
+@Component({
+	selector: 'student-table',
+	template: 'student-table.component.html'
+})
+export class StudentCategory {
+	@Input() tableSwitch: TableSwitch;
+}
+
+@Component({
+	selector: 'school-table',
+	template: 'school-table.component.html'
+})
+export class SchoolCategory {
+	@Input() tableSwitch: TableSwitch;
+}
+
+@Component({
+	selector: 'tournament-table',
+	template: 'tournament-table.component.html'
+})
+export class TournamentCategory {
+	@Input() tableSwitch: TableSwitch;
+}
+
+export const tableSwitchComponents = [StudentCategory, SchoolCategory, TournamentCategory];

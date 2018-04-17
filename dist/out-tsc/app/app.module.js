@@ -7,23 +7,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var app_component_1 = require("./app.component");
-var table_component_1 = require("./tables/table.component"); //!!IMPORTANT!!
-var student_table_component_1 = require("./tables/student-table.component");
-var tournament_table_component_1 = require("./tables/tournament-table.component");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/common/http");
 var model_module_1 = require("./models/model.module");
-//import { AdminModule } from "./admin/admin.module";
-//import { RoutingConfig } from './app.routing';
+var app_component_1 = require("./app.component");
+//import { TableComponent } from "./tables/table.component";
+var student_table_component_1 = require("./tables/student-table.component");
+var tournament_table_component_1 = require("./tables/tournament-table.component");
+var school_table_component_1 = require("./tables/school-table.component");
+var app_routing_1 = require("./app.routing");
+//import { RouterModule, Routes } from "@angular/router";
+//const appRoutes: Routes = [
+//	{ path: 'StudentTable', component: StudentTableComponent },
+//	{ path: 'SchoolTable', component: SchoolTableComponent },
+//	{ path: 'TournamentTable', component: TournamentTableComponent },
+//	{ path: '', redirectTo: '/SchoolTable', pathMatch: 'full' }
+//]
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [app_component_1.AppComponent, table_component_1.TableComponent, student_table_component_1.StudentTableComponent, tournament_table_component_1.TournamentTableComponent],
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpClientModule, model_module_1.ModelModule],
+            declarations: [app_component_1.AppComponent, student_table_component_1.StudentTableComponent, school_table_component_1.SchoolTableComponent, tournament_table_component_1.TournamentTableComponent],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpClientModule, model_module_1.ModelModule, app_routing_1.RoutingConfig],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
         })

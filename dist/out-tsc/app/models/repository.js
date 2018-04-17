@@ -13,16 +13,20 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 var studentsUrl = "/api/students";
 var tournamentsUrl = "/api/tournaments";
+var schoolsUrl = "/api/schools";
 //searchHeroes(term: string): Observable < Hero[] > { term = term.trim();
 // Add safe, URL encoded search parameter if there is a search term
 //const options = term ? { params: new HttpParams().set('name', term) } : {};
 var Repository = /** @class */ (function () {
+    //Will eventually need to instantiate these through an event handler
     function Repository(http) {
         this.http = http;
-        this.getStudent(53);
+        //this.getStudent(53);
         this.getStudents();
-        this.getTournament(8);
+        //this.getTournament(8);
         this.getTournaments();
+        //this.getSchool(52);
+        this.getSchools();
     }
     Repository.prototype.getStudent = function (id) {
         var _this = this;
@@ -39,6 +43,14 @@ var Repository = /** @class */ (function () {
     Repository.prototype.getTournaments = function () {
         var _this = this;
         this.http.get(tournamentsUrl).subscribe(function (response) { return _this.tournaments = response; });
+    };
+    Repository.prototype.getSchool = function (id) {
+        var _this = this;
+        this.http.get(schoolsUrl + "/" + id).subscribe(function (response) { return _this.school = response; });
+    };
+    Repository.prototype.getSchools = function () {
+        var _this = this;
+        this.http.get(schoolsUrl).subscribe(function (response) { return _this.schools = response; });
     };
     Repository = __decorate([
         core_1.Injectable(),

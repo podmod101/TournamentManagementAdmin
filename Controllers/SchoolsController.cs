@@ -24,8 +24,8 @@ namespace TournamentManagementAdmin.Controllers
         [HttpGet]
         public IEnumerable<School> GetSchool()
         {
-            return _context.School;
-        }
+			return _context.School.ToList(); //Needs to serialize resulting circular references to json
+		}
 
         // GET: api/Schools/5
         [HttpGet("{id}")]
@@ -36,9 +36,9 @@ namespace TournamentManagementAdmin.Controllers
                 return BadRequest(ModelState);
             }
 
-            var school = await _context.School.SingleOrDefaultAsync(m => m.SchoolId == id);
+            var school = await _context.School.SingleOrDefaultAsync(m => m.SchoolId == id).ToAsyncEnumerable().ToList(); //Needs to serialize resulting circular references to json
 
-            if (school == null)
+			if (school == null)
             {
                 return NotFound();
             }

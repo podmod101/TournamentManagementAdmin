@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var repository_1 = require("../models/repository");
+var table_switch_1 = require("./table-switch");
 var core_1 = require("@angular/core");
 var TableComponent = /** @class */ (function () {
     function TableComponent(repo) {
@@ -25,4 +26,53 @@ var TableComponent = /** @class */ (function () {
     return TableComponent;
 }());
 exports.TableComponent = TableComponent;
+var StudentCategory = /** @class */ (function () {
+    function StudentCategory() {
+    }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", table_switch_1.TableSwitch)
+    ], StudentCategory.prototype, "tableSwitch", void 0);
+    StudentCategory = __decorate([
+        core_1.Component({
+            selector: 'student-table',
+            template: 'student-table.component.html'
+        })
+    ], StudentCategory);
+    return StudentCategory;
+}());
+exports.StudentCategory = StudentCategory;
+var SchoolCategory = /** @class */ (function () {
+    function SchoolCategory() {
+    }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", table_switch_1.TableSwitch)
+    ], SchoolCategory.prototype, "tableSwitch", void 0);
+    SchoolCategory = __decorate([
+        core_1.Component({
+            selector: 'school-table',
+            template: 'school-table.component.html'
+        })
+    ], SchoolCategory);
+    return SchoolCategory;
+}());
+exports.SchoolCategory = SchoolCategory;
+var TournamentCategory = /** @class */ (function () {
+    function TournamentCategory() {
+    }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", table_switch_1.TableSwitch)
+    ], TournamentCategory.prototype, "tableSwitch", void 0);
+    TournamentCategory = __decorate([
+        core_1.Component({
+            selector: 'tournament-table',
+            template: 'tournament-table.component.html'
+        })
+    ], TournamentCategory);
+    return TournamentCategory;
+}());
+exports.TournamentCategory = TournamentCategory;
+exports.tableSwitchComponents = [StudentCategory, SchoolCategory, TournamentCategory];
 //# sourceMappingURL=table.component.js.map

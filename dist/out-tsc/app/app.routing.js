@@ -1,28 +1,15 @@
-//import { Routes, RouterModule } from "@angular/router";
-//import { StudentTableComponent } from "./tables/studentTable.component";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var router_1 = require("@angular/router");
+var student_table_component_1 = require("./tables/student-table.component");
+var tournament_table_component_1 = require("./tables/tournament-table.component");
+var school_table_component_1 = require("./tables/school-table.component");
 //import { AdminComponent } from "./admin/admin.component";
-//import { StudentAdminComponent } from "./admin/studentAdmin.component";
-//import { ProductSelectionComponent } from "./store/productSelection.component";
-//import { CartDetailComponent } from "./store/cartDetail.component";
-//import { CheckoutDetailsComponent } from "./store/checkout/checkoutDetails.component";
-//import { CheckoutPaymentComponent } from "./store/checkout/checkoutPayment.component";
-//import { CheckoutSummaryComponent } from "./store/checkout/checkoutSummary.component";
-//import { OrderConfirmationComponent } from "./store/checkout/orderConfirmation.component";
-//import { AdminComponent } from "./admin/admin.component";
-//import { OverviewComponent } from "./admin/overview.component";
-//import { ProductAdminComponent } from "./admin/productAdmin.component";
-//import { OrderAdminComponent } from "./admin/orderAdmin.component";
-//const routes: Routes = [
-//    { path: "tables", component: StudentTableComponent }
-//,
-//   { path: "checkout/step1", component: CheckoutDetailsComponent },
-//   { path: "checkout/step2", component: CheckoutPaymentComponent },
-//   { path: "checkout/step3", component: CheckoutSummaryComponent },
-//   { path: "checkout/confirmation", component: OrderConfirmationComponent },
-//   { path: "checkout", component: CheckoutDetailsComponent },
-//   { path: "cart", component: CartDetailComponent },
-//   { path: "store", component: ProductSelectionComponent },
-//{ path: "", component: ProductSelectionComponent }
-//]
-//export const RoutingConfig = RouterModule.forRoot(routes); 
+var appRoutes = [
+    { path: 'StudentTable', component: student_table_component_1.StudentTableComponent },
+    { path: 'SchoolTable', component: school_table_component_1.SchoolTableComponent },
+    { path: 'TournamentTable', component: tournament_table_component_1.TournamentTableComponent },
+    { path: '', redirectTo: '/SchoolTable', pathMatch: 'full' }
+];
+exports.RoutingConfig = router_1.RouterModule.forRoot(appRoutes, { enableTracing: true });
 //# sourceMappingURL=app.routing.js.map
